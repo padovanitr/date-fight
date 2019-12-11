@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Turn-based board battle game in Javascript and jQuery">
+    <meta name="author" content="Thiago Padovani">
+    <title>Date Fight</title>
+    <link rel="icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    
+</head>
+
+<body>
+    
+    <!-- Player 1 board -->
+    <div class="container">
+        <div class="player-container active" id="player-1">
+            <div class="player">
+                <h2 class="name-1"></h2>
+                <div class="player-img"> <img src="image/player1.png" alt="pig">
+                </div>
+            </div>
+            <div class="weapon">
+                <h2>Life Score: <span id="life-1"></span></h2>
+                <div class="weapons-1"></div>
+                <h3>Power: <span class="powers-1"></span></h3>
+                <div class="turn-1"></div>
+                <div class="buttons">
+                    <button class="btn-attack-1">Attack</button>
+                    <button class="btn-defend-1">Defend</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- start screen -->
+        <section id="intro">
+            <div class="intro-content">
+                <h1>Date Fight</h1>
+                <img src="image/logo.png" class="center">
+                <h3>Welcome to the most weird fight ever</h3>
+                <h4>Flor loves Jão and Zé, but she has time to go out with one of them, so they will fight to see who will take Flor on a date.</h4>
+                <h4>Rules:</h4>
+                <h4> You can only move 3 spaces horizontally or vertically.</h4>
+                <h4> Around the land you'll find weapons to get stronger</h4>
+                <h4> You can attack and defense.</h4>
+            
+            
+                <h3>I wish you luck!</h3>
+                <button id="start" onclick="startGame(this)">START</button>
+            </div>
+        </section>
+
+
+        <!-- Board -->
+        <div id="board-game">
+        </div>
+
+
+        <!-- Player 2 board -->
+        <div class="player-container" id="player-2">
+            <div class="player">
+                <h2 class="name-2"></h2>
+                <div class="player-img"> <img src="image/player2.png" alt="snake"></div>
+            </div>
+            <div class="weapon">
+                <h2>Life score: <span id="life-2"></span></h2>
+                <div class="weapons-2"></div>
+                <h3>Power: <span class="powers-2"></span></h3>
+                <div class="turn-2"></div>
+                <div class="buttons">
+                    <button class="btn-attack-2">Attack</button>
+                    <button class="btn-defend-2">Defend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Game Over screen -->
+    <div id="gameOver">
+        <div class="gameOver-content">
+            <h2>GAME OVER!</h2>
+            <p>The winner is <span id="winner"></span>!</p>
+            <p>Don't worry <span id='looser'></span>! Try again !</p>
+            <h2>Thank you for playing!</h2>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+
+</html>
